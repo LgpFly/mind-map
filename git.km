@@ -1,0 +1,626 @@
+{
+    "root": {
+        "data": {
+            "id": "d0kl61dwubk0",
+            "created": 1713173065593,
+            "text": "git-order"
+        },
+        "children": [
+            {
+                "data": {
+                    "id": "d0kl79yh3h40",
+                    "created": 1713173162615,
+                    "text": "git基础"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "d0kl7k56gdc0",
+                            "created": 1713173184788,
+                            "text": "在本地目录中初始化"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "d0kl8d2tips0",
+                                    "created": 1713173247772,
+                                    "text": "切换到相应的目录"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "d0kl8ldo3jc0",
+                                    "created": 1713173265843,
+                                    "text": "git init  ",
+                                    "note": "完成这个操作之后，会产生一个.git的文件夹，完成该操作之后只是初始化，但是文件还没有被跟踪。\n如果在一个非空文件夹中，应该进行以下操作\ngit add *.c\ngit add LICENSE\ngit commit -m \"initial prokect version\"\n\n"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "d0kl7xbr0y00",
+                            "created": 1713173213484,
+                            "text": "clone一个新仓库"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "d0klbvrrys80",
+                                    "created": 1713173523556,
+                                    "text": "git clone <url>",
+                                    "note": "git clone https://github.com/libgit2/libgit2 ，会在当前目录下新建一个libgit2的目录并在这个目录下创建一个.git的目录。\n如果想自己定义目录名的话 git clone https://github.com/libgit2/libgit2 mylibgit，这时目录时mylibgit目录。"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "d0klg2nkmm00",
+                            "created": 1713173851996,
+                            "text": "记录每次更新到仓库",
+                            "expandState": "collapse"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "d0kliaf8ti80",
+                                    "created": 1713174025635,
+                                    "text": "文件有两种状态：追踪和未追踪"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "d0klmp1ecv40",
+                                    "created": 1713174370906,
+                                    "text": "文件更为详细的状态"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "d0klnbq976o0",
+                                            "created": 1713174420298,
+                                            "text": "untracked",
+                                            "note": "untracked->staged(add the file)\nunmodified->modified(edit the file)\nmodified->staged(stage the file)\nstage->unmodified(commit)\nunmodified->untraked(remove the file)"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "d0klntdojco0",
+                                            "created": 1713174458720,
+                                            "text": "unmodified"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "d0klo1ouynk0",
+                                            "created": 1713174476810,
+                                            "text": "modified"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "d0klo3x3r5s0",
+                                            "created": 1713174481662,
+                                            "text": "statged"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "d0klr1hz8eg0",
+                                    "created": 1713174711487,
+                                    "text": "跟踪新文件：git add file_name"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "d0kltfrpwp40",
+                                    "created": 1713174899279,
+                                    "text": "将已经修改的文件放入暂存区：git add readme.md，只有先放入暂存区才能commit"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "d0klw43viao0",
+                                    "created": 1713175108985,
+                                    "text": "状态简览：git status -s(--short)"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "d0klxpm7lu80",
+                                            "created": 1713175234170,
+                                            "text": "显示区有两栏，左侧指明了暂存区的状态，右侧指明了工作区的状态。"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "d0klzj8pic00",
+                                            "created": 1713175377022,
+                                            "text": "??:新田间的未跟踪的文件"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "d0km1bvw7m00",
+                                            "created": 1713175517738,
+                                            "text": "A:新添加到暂存区的文件"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "d0km1p3lzxc0",
+                                            "created": 1713175546502,
+                                            "text": "M:modified file"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "d0km2pbbdrs0",
+                                    "created": 1713175625332,
+                                    "text": "忽略文件",
+                                    "expandState": "expand"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "d0l6015qgkg0",
+                                            "created": 1713231838222,
+                                            "text": "想要忽略文件可以新建一个.gitignore的文件"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "d0l66l9b6pc0",
+                                            "created": 1713232352159,
+                                            "text": ".gitignore文件的规范格式如下"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "d0l66z78j1s0",
+                                                    "created": 1713232382508,
+                                                    "text": "空行或者以#开头的都会被忽略"
+                                                },
+                                                "children": []
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "d0l6782wlo00",
+                                                    "created": 1713232401838,
+                                                    "text": "可以以标准的glob模式匹配，会递归的应用在整个工作区当中",
+                                                    "note": "常用的有一下几个：\n'*' ：匹配所有\n'?' :匹配单个\n'[...]' :匹配中括号中的所有字符\n'[!...]' :匹配除了中括号中的所有字符\n'[0-9]' : 匹配所有0到9的数字\n'***' : 匹配任意中间目录，例如a/**/z"
+                                                },
+                                                "children": []
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "d0l6ceao2ao0",
+                                                    "created": 1713232807188,
+                                                    "text": "以/开头防止递归"
+                                                },
+                                                "children": []
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "d0l6djwpmr40",
+                                                    "created": 1713232897769,
+                                                    "text": "以/结尾指定目录"
+                                                },
+                                                "children": []
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "d0l6dx8s3jk0",
+                                                    "created": 1713232926797,
+                                                    "text": "要忽略指定模式以外的文件或目录，可以在迷失前加上！取反"
+                                                },
+                                                "children": []
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "d0l6arrpwnk0",
+                                                    "created": 1713232679789,
+                                                    "text": "一个示例"
+                                                },
+                                                "children": [
+                                                    {
+                                                        "data": {
+                                                            "id": "d0l6kiqzurc0",
+                                                            "created": 1713233443796,
+                                                            "text": "*.[oa]:忽略所有的.a和.o的文件"
+                                                        },
+                                                        "children": []
+                                                    },
+                                                    {
+                                                        "data": {
+                                                            "id": "d0l6kvkw9jc0",
+                                                            "created": 1713233471726,
+                                                            "text": "!lib.a：即使上面那一条，也比忽略lib.a"
+                                                        },
+                                                        "children": []
+                                                    },
+                                                    {
+                                                        "data": {
+                                                            "id": "d0l6lcnafgw0",
+                                                            "created": 1713233508876,
+                                                            "text": "/todo：只忽略当前目录下的todo文件夹"
+                                                        },
+                                                        "children": []
+                                                    },
+                                                    {
+                                                        "data": {
+                                                            "id": "d0l6lszm5tc0",
+                                                            "created": 1713233544449,
+                                                            "text": "build/:忽略所有build目录"
+                                                        },
+                                                        "children": []
+                                                    },
+                                                    {
+                                                        "data": {
+                                                            "id": "d0l6m82mnfk0",
+                                                            "created": 1713233577283,
+                                                            "text": "doc/*.txt：只忽略doc下的txt文件"
+                                                        },
+                                                        "children": []
+                                                    },
+                                                    {
+                                                        "data": {
+                                                            "id": "d0l6rqxocdc0",
+                                                            "created": 1713234010163,
+                                                            "text": "doc/**/*.pdf：忽略doc及其目录下的.pdf"
+                                                        },
+                                                        "children": []
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "d0l66w81fyo0",
+                                            "created": 1713232376027,
+                                            "text": "topic"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "d0l6uhktz000",
+                                    "created": 1713234224888,
+                                    "text": "viewing staged and unstaged changes"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "d0l70p8lqy00",
+                                            "created": 1713234711748,
+                                            "text": "git diff:to see what you have changed but not yet staged.compares what is in you working directory with your staging area."
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "d0l71w97f0g0",
+                                            "created": 1713234805386,
+                                            "text": "git diff --staged: compares your staged changes to your last commit."
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "d0l76oir3680",
+                                            "created": 1713235180370,
+                                            "text": "git diff --cached:to see what you have staged so far"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "d0l784yb4i80",
+                                    "created": 1713235294503,
+                                    "text": "committing your changes"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "d0l7jurb2rs0",
+                                            "created": 1713236212682,
+                                            "text": "git commit:doing so launches your editor of choice"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "d0l7kdp8q400",
+                                            "created": 1713236253916,
+                                            "text": "git commit -m \"message\""
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "d0l7nlpf3680",
+                                    "created": 1713236506434,
+                                    "text": "skipping the staging area:-a"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "d0l7nudxe940",
+                                            "created": 1713236525330,
+                                            "text": "git copmmit -a -m \"message\" : -a includes all changed files "
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "d0l7qc2ag1c0",
+                                    "created": 1713236720536,
+                                    "text": "removing files"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "d0l7u13hr8o0",
+                                            "created": 1713237010121,
+                                            "text": "git rm:remove file from your staging area and remove fie from your working directory.if you modified the fie or had already added it to the staging area must use -f for force delete."
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "d0l7v6d1n2w0",
+                                            "created": 1713237099947,
+                                            "text": "if you want not track one file but dont want to remove from working directory：git rm --cached README"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "d0l85xiwufs0",
+                            "created": 1713237942716,
+                            "text": "viewing the commit history",
+                            "expandState": "collapse"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "d0l89lrfig80",
+                                    "created": 1713238230567,
+                                    "text": "git log -p(patch):show the difference introduced in each commit.use git log -p -2 show only the last two entries"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "d0l8axk9htc0",
+                                    "created": 1713238334619,
+                                    "text": "git log --stat:to see some abbreviated stats for each commit"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "d0l8ckyr0so0",
+                                    "created": 1713238463925,
+                                    "text": "git log --pretty=oneline:show abbreviated information"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "d0l8eaktcvc0",
+                                    "created": 1713238598043,
+                                    "text": "git log --pretty=format:\"%h-%an-%ar-%s\"",
+                                    "note": "%h:hash\n%an:author\n%ar:author date\n%s:subject "
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "d0l8gviaww00",
+                                    "created": 1713238800332,
+                                    "text": "git log --graph --pretty=format:\"%h:%s\""
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "d0l8rs0uw0w0",
+                            "created": 1713239654752,
+                            "text": "undoing things",
+                            "expandState": "collapse"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "d0l8s0jwsmg0",
+                                    "created": 1713239673319,
+                                    "text": "git commit --amend -m\"message\"   if you forget to add some files,and want to redo that commit,make the additional changes you forgot ,stage them and commit again using --amend."
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "d0l9de2e1ts0",
+                                    "created": 1713241348382,
+                                    "text": "if you  commit and then rrealize you forgot to stage the changes in a file you wanted to add this commit.do like this",
+                                    "expandState": "collapse"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "d0l9i34yb4w0",
+                                            "created": 1713241716413,
+                                            "text": "git commit -m \"initial commit\""
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "d0l9icg3azc0",
+                                            "created": 1713241736678,
+                                            "text": "git add forgot-file"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "d0l9ii1pkk80",
+                                            "created": 1713241748869,
+                                            "text": "git commit --amend"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "d0l9mos6ctc0",
+                                    "created": 1713242076986,
+                                    "text": "unstaging a staged file",
+                                    "expandState": "collapse"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "d0l9mx5r6g00",
+                                            "created": 1713242095222,
+                                            "text": "git reset HEAD staged-file:this command will unstage the staged file"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "d0l9tfgos7c0",
+                                    "created": 1713242605250,
+                                    "text": "unmodifying a modified file",
+                                    "expandState": "collapse"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "d0l9tp85hqg0",
+                                            "created": 1713242626501,
+                                            "text": "git checkout -- <file-name>"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "d0l9v6laicg0",
+                                    "created": 1713242742665,
+                                    "text": "git restore(more using)",
+                                    "background": "#73a1bf",
+                                    "expandState": "collapse"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "d0l9vduwb2o0",
+                                            "created": 1713242758484,
+                                            "text": "git restore --staged stage-file-name:unstageing a staged file"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "d0l9vmbw2880",
+                                            "created": 1713242776925,
+                                            "text": "git restaore modified-file-name:unmidifying a midified file"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "d0l9xvca8ag0",
+                            "created": 1713242953269,
+                            "text": "working with remote"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "d0l9y01n98o0",
+                                    "created": 1713242963509,
+                                    "text": "show your remotes"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "d0la6fun63k0",
+                                            "created": 1713243624828,
+                                            "text": "cmd:git remote -v. -v show Url"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "d0la6ti0fzs0",
+                                    "created": 1713243654539,
+                                    "text": "adding remote repositories"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "d0la73e19f40",
+                                            "created": 1713243676066,
+                                            "text": "topic"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "template": "default",
+    "theme": "fresh-blue",
+    "version": "1.4.43"
+}
