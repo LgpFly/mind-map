@@ -463,7 +463,7 @@
                             "id": "d0l8rs0uw0w0",
                             "created": 1713239654752,
                             "text": "undoing things",
-                            "expandState": "collapse"
+                            "expandState": "expand"
                         },
                         "children": [
                             {
@@ -550,7 +550,7 @@
                                     "created": 1713242742665,
                                     "text": "git restore(more using)",
                                     "background": "#73a1bf",
-                                    "expandState": "collapse"
+                                    "expandState": "expand"
                                 },
                                 "children": [
                                     {
@@ -608,7 +608,41 @@
                                         "data": {
                                             "id": "d0la73e19f40",
                                             "created": 1713243676066,
-                                            "text": "topic"
+                                            "text": "cmd:git remote add <shortname> <url>.shortname can 代替 whole URL"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "d0ldrceeqe00",
+                                    "created": 1713253726293,
+                                    "text": "fetching and pulling from your remotes"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "d0ldrrmxg5k0",
+                                            "created": 1713253759460,
+                                            "text": "cmd:git fetch <remote>"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "d0ldtceb3oo0",
+                                    "created": 1713253883015,
+                                    "text": "pushing to your remote"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "d0ldtle5z7k0",
+                                            "created": 1713253902598,
+                                            "text": "cmd:git push <remote> <branch>.pushing commit to remote"
                                         },
                                         "children": []
                                     }
