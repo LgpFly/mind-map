@@ -802,6 +802,39 @@
                                 "children": []
                             }
                         ]
+                    },
+                    {
+                        "data": {
+                            "id": "d0lgz9f1o280",
+                            "created": 1713262810044,
+                            "text": "查看历史提交"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "d0lgzjh4jj40",
+                                    "created": 1713262831938,
+                                    "text": "cmd:git log "
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "d0lgzqtj3tk0",
+                                    "created": 1713262847925,
+                                    "text": "examples:git log --oneline -- graph --all"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "d0lh1tbu5bs0",
+                            "created": 1713263010114,
+                            "text": "basic branching and merging"
+                        },
+                        "children": []
                     }
                 ]
             }
