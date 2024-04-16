@@ -463,7 +463,7 @@
                             "id": "d0l8rs0uw0w0",
                             "created": 1713239654752,
                             "text": "undoing things",
-                            "expandState": "expand"
+                            "expandState": "collapse"
                         },
                         "children": [
                             {
@@ -577,7 +577,8 @@
                         "data": {
                             "id": "d0l9xvca8ag0",
                             "created": 1713242953269,
-                            "text": "working with remote"
+                            "text": "working with remote",
+                            "expandState": "collapse"
                         },
                         "children": [
                             {
@@ -664,6 +665,141 @@
                                         "children": []
                                     }
                                 ]
+                            },
+                            {
+                                "data": {
+                                    "id": "d0lfyyfnbi80",
+                                    "created": 1713259965026,
+                                    "text": "rename and removing remotes"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "d0lfz9lf0g00",
+                                            "created": 1713259989319,
+                                            "text": "cmd:git remote rename <old-remote> <new-remote>"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "d0lg00mpu6g0",
+                                            "created": 1713260048171,
+                                            "text": "cmd:git remoite remove <remote>"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "d0lg0yro9vk0",
+                            "created": 1713260122481,
+                            "text": "tagging",
+                            "background": "#ff0000"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "d0lg2410ysg0",
+                                    "created": 1713260212295,
+                                    "text": "listing your tags"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "d0lg2ak8r800",
+                                            "created": 1713260226518,
+                                            "text": "cmd:git tag -l(list)"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "d0lg33ii2zk0",
+                                            "created": 1713260289539,
+                                            "text": "examples:git tag -l \"v1.8.5*\""
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "d0lg3mlkqew0",
+                                    "created": 1713260331084,
+                                    "text": "creating tags"
+                                },
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "d0lggcg6gww0",
+                    "created": 1713261327724,
+                    "text": "git branch"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "d0lggoyfsmg0",
+                            "created": 1713261354949,
+                            "text": "creating branch"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "d0lggxk134o0",
+                                    "created": 1713261373669,
+                                    "text": "cmd:git branch <branch-name>"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "d0lgh9njsgo0",
+                                    "created": 1713261400003,
+                                    "text": "examples:git branch testing"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "d0lghg5uk800",
+                                    "created": 1713261414170,
+                                    "text": "note:it didnt seitch to new branch "
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "d0lgjd6lpx40",
+                            "created": 1713261564414,
+                            "text": "switching branch"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "d0lgjj20ucg0",
+                                    "created": 1713261577198,
+                                    "text": "cmd:git checkout <branch-name>"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "d0lgjq8j3940",
+                                    "created": 1713261592829,
+                                    "text": "examples: git checkout testing"
+                                },
+                                "children": []
                             }
                         ]
                     }
@@ -671,7 +807,7 @@
             }
         ]
     },
-    "template": "default",
+    "template": "right",
     "theme": "fresh-blue",
     "version": "1.4.43"
 }
