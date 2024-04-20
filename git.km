@@ -742,7 +742,8 @@
                 "data": {
                     "id": "d0lggcg6gww0",
                     "created": 1713261327724,
-                    "text": "git branch"
+                    "text": "git branch",
+                    "expandState": "expand"
                 },
                 "children": [
                     {
@@ -834,7 +835,272 @@
                             "created": 1713263010114,
                             "text": "basic branching and merging"
                         },
-                        "children": []
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "d0oksv3rovk0",
+                                    "created": 1713578273012,
+                                    "text": "cmd:git merge abc"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "d0oku18zlh40",
+                                    "created": 1713578364752,
+                                    "text": "现在在master分支上，合并abc分支"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "d0okuet8c680",
+                                    "created": 1713578394275,
+                                    "text": "原理：找到master和abc分支最近的公共祖先，然后将相应的应用都放在一个分支里进行提交。"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "d0okwdo7hh40",
+                                    "created": 1713578548522,
+                                    "text": "合并时遇到冲突，要先解决掉冲突再add，然后再提交一次。"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "d0okxhxiboo0",
+                            "created": 1713578636156,
+                            "text": "分支管理"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "d0okxo5ru1k0",
+                                    "created": 1713578649716,
+                                    "text": "cmd：git branch -v， 查看每个分支的最后以此提交"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "d0okyb73znk0",
+                                    "created": 1713578699863,
+                                    "text": "cmd：git branch --merged(--no-merged)可以过滤列表中已经合并到当前分支的分支，合并过的就可以git branch -d branch_name 删除分支了（--no-merged查看没有合并的分支）git branch -D 会强制删除分支。"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "d0old5765e00",
+                            "created": 1713579862269,
+                            "text": "远程分支"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "d0oldafnqwo0",
+                                    "created": 1713579873666,
+                                    "text": "cmd:git ls-remote <remote>/git  remote show <remote>"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "d0oledcpte80",
+                                    "created": 1713579958382,
+                                    "text": "只要不用git fetch 或者git pull，远程分支origin/,aster不会动。反之会移动到最新的地方"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "d0olfdswzcg0",
+                                    "created": 1713580037726,
+                                    "text": "git remote add <url>添加新的远程，当新的远程是当前的子集时，运行git fetch时只是添加新远程的指针。当不只是子集时，会拉去其分支到本地。"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "d0olink7y0w0",
+                            "created": 1713580294061,
+                            "text": "推送"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "d0olj3r4s0w0",
+                                    "created": 1713580329307,
+                                    "text": "cmd:git push <remote> <branch>,推送本地的branch分支到<remote>山的通病同名branch分支"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "d0olk7ty4d40",
+                                    "created": 1713580416549,
+                                    "text": "git branch origin local_branch:remote_branch，把本地的local_branch分支推送到远端的remote_branch分支。"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "d0olm89vv9s0",
+                            "created": 1713580574241,
+                            "text": "跟踪分支"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "d0olqxyz5aw0",
+                                    "created": 1713580943634,
+                                    "text": "设置一个本地已有的分支跟踪一个刚拉去下来的远程分支，或者想要纠正正在跟踪的上游分支，可以使用以下命令：git branch -u(--set-upstream-to) origin/branch_name"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "d0oltd3o6kw0",
+                                    "created": 1713581133298,
+                                    "text": "git branch -vv 可以列出本地分支追踪的哪一个远程分支，本地分支和远程分支的提交情况。"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "d0oluys2awg0",
+                                    "created": 1713581258850,
+                                    "text": "想要通过git branch -vv获取最新的情况：git fetch --all;git branch -vv"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "d0olwe7zcs80",
+                            "created": 1713581370828,
+                            "text": "拉取"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "d0olwigd0c80",
+                                    "created": 1713581380042,
+                                    "text": "git fetch：他会把远程的所有的拉下来，但不会进行merge操作。"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "d0olx2oncww0",
+                                    "created": 1713581424078,
+                                    "text": "git pull：他会把远程的拉下来然后尝试进行合并"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "d0ombo2h5ug0",
+                            "created": 1713582567725,
+                            "text": "删除远程分支"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "d0ombsnvo5k0",
+                                    "created": 1713582577727,
+                                    "text": "git push origin --delete branch_name"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "d0omck2l0o00",
+                            "created": 1713582637389,
+                            "text": "变基"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "d0omd8qipxs0",
+                                    "created": 1713582691079,
+                                    "text": "当前在分支abc上，想要把这些操作合并到master上。可以在abc分支上运行git rebase master"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "d0omelrlknk0",
+                                    "created": 1713582797807,
+                                    "text": "有趣的变基：再master分支上检索出abc，提交一次后再检索出abcd分支，abc继续提交两次，ancd也提交两次。现在想把abcd上的提交合并到master，而不合并abc上的提交，如何操作。git rebase --onto master abc abcd.这个指令的意思是取出abcd分支，找出他从abc分支检索出来之后的补丁，然后把这些补丁在master上重放一遍，让他们看起来就像基于master修改的一样"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "d0omni26hls0",
+                                    "created": 1713583495017,
+                                    "text": "如果不想切换分支：git rebase master abc.将abc变基到master上。然后git checkout master,git merge abc."
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "d0omoiiskvs0",
+                                    "created": 1713583574385,
+                                    "text": "删除那些本地的已经搞定的分支：git branch -d abc"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "d0omp4qf4g80",
+                                    "created": 1713583622736,
+                                    "text": "变基的风险：如果提交存在于仓库之外，而别人可能基于这些提交进行开发，那么不要执行变基"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "d0omr9q5ar40",
+                                    "created": 1713583790331,
+                                    "text": "自己理解：变基其实自己可以用，简化git的记录。"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "d0omsjy27a80",
+                            "created": 1713583890942,
+                            "text": "变基VS合并"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "d0omsu33lqo0",
+                                    "created": 1713583913014,
+                                    "text": "只对尚未推送和分享给别人的本地修改执行变基操作清理历史。从不对已推送至别处的提交执行变基操作。"
+                                },
+                                "children": []
+                            }
+                        ]
                     }
                 ]
             }
