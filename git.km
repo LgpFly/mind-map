@@ -10,7 +10,8 @@
                 "data": {
                     "id": "d0kl79yh3h40",
                     "created": 1713173162615,
-                    "text": "git基础"
+                    "text": "git基础",
+                    "expandState": "expand"
                 },
                 "children": [
                     {
@@ -479,7 +480,7 @@
                                     "id": "d0l9de2e1ts0",
                                     "created": 1713241348382,
                                     "text": "if you  commit and then rrealize you forgot to stage the changes in a file you wanted to add this commit.do like this",
-                                    "expandState": "collapse"
+                                    "expandState": "expand"
                                 },
                                 "children": [
                                     {
@@ -578,14 +579,15 @@
                             "id": "d0l9xvca8ag0",
                             "created": 1713242953269,
                             "text": "working with remote",
-                            "expandState": "collapse"
+                            "expandState": "expand"
                         },
                         "children": [
                             {
                                 "data": {
                                     "id": "d0l9y01n98o0",
                                     "created": 1713242963509,
-                                    "text": "show your remotes"
+                                    "text": "show your remotes",
+                                    "expandState": "expand"
                                 },
                                 "children": [
                                     {
