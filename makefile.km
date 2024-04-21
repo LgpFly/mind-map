@@ -1,0 +1,765 @@
+{
+    "root": {
+        "data": {
+            "id": "d0orwr7drp40",
+            "created": 1713598325749,
+            "text": "makefile"
+        },
+        "children": [
+            {
+                "data": {
+                    "id": "d0os06xwmw00",
+                    "created": 1713598595097,
+                    "text": "syntax"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "d0os44flnq80",
+                            "created": 1713598903094,
+                            "text": "Targets : Prerequires,next line is command.start with a tab charachter"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "d0os6n15xm00",
+                            "created": 1713599100308,
+                            "text": "Targets separated by spaces.Prerequies also need separated by space."
+                        },
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "d0osj4s082w0",
+                    "created": 1713600079306,
+                    "text": "the essence of make"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "d0osj9hneig0",
+                            "created": 1713600089564,
+                            "text": "check prerequired wheather modifiy,if modified , recompline"
+                        },
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "d0osobmr5ls0",
+                    "created": 1713600486047,
+                    "text": "make clean"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "d0osoedgbmo0",
+                            "created": 1713600492015,
+                            "text": "如果没用.PHONY,而且当前目录下又恰巧有一个clean的文件，那么make clean就不会执行。"
+                        },
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "d0osqcmqm1c0",
+                    "created": 1713600644951,
+                    "text": "variables"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "d0osqmku6s80",
+                            "created": 1713600666604,
+                            "text": "变量只能是字符串，更希望用:=，但是=也能正常工作。"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "d0osra93sao0",
+                            "created": 1713600718137,
+                            "text": "单引号和双引号对make没用，不建议使用"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "d0ossk3v2ow0",
+                            "created": 1713600817952,
+                            "text": "变量的引用。通过${}或者$()"
+                        },
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "d0ossfwn0pk0",
+                    "created": 1713600808808,
+                    "text": "Targets"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "d0otyvl15vs0",
+                            "created": 1713604134230,
+                            "text": "the all targets"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "d0pfzcgeits0",
+                                    "created": 1713666235373,
+                                    "text": "make 未指定目标的话，他将运行列出的第一条规则"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "d0otzmxrx8o0",
+                            "created": 1713604193774,
+                            "text": "Multiple targets"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "d0pfyxfvrg80",
+                                    "created": 1713666202690,
+                                    "text": "当一个规则有多个目标是，他将为每个目标运行命令"
+                                },
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "d0pfzwa8iqg0",
+                    "created": 1713666278536,
+                    "text": "Automatic Varaables and wildcards"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "d0pg09umnnc0",
+                            "created": 1713666308067,
+                            "text": "wildcard"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "d0pg0qxs9m00",
+                                    "created": 1713666345263,
+                                    "text": "*"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "d0pg25dh9r40",
+                                            "created": 1713666455052,
+                                            "text": "可用于目标，先决条件和通配符函数中"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "d0pg2ysxcjk0",
+                                            "created": 1713666519112,
+                                            "text": "不能直接用在变量中"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "d0pg463979k0",
+                                            "created": 1713666613338,
+                                            "text": "除了在通配符函数中，如果*没找到东西将会保持原样"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "d0pg0so0e3k0",
+                                    "created": 1713666349026,
+                                    "text": "%"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "d0pg9y29o340",
+                                            "created": 1713667066049,
+                                            "text": "在匹配模式下使用，他会匹配字符串中的一个或多个字符。this match is called the steam"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "d0pgamdnmy80",
+                                            "created": 1713667118981,
+                                            "text": "在替换模式下，他会采用匹配的词干并将其替换未字符串"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "d0pgbgl4ssw0",
+                                            "created": 1713667184736,
+                                            "text": "%最常用于规则定义和某些特定函数"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "d0pgc1gdjzc0",
+                            "created": 1713667230161,
+                            "text": "automatic vsriables"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "d0pgc9a0wd40",
+                                    "created": 1713667247191,
+                                    "text": "@：是target"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "d0pgczge6140",
+                                    "created": 1713667304173,
+                                    "text": "?：输出比目标更行的先决条件"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "d0pgdm4rtcw0",
+                                    "created": 1713667353536,
+                                    "text": "^：输出所有的先决条件"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "d0pwi2hm0yo0",
+                                    "created": 1713712840356,
+                                    "text": "<：表示第一个先决条件名"
+                                },
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "d0pghzepgy00",
+                    "created": 1713667695892,
+                    "text": "fancy rules"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "d0pgi41h2pc0",
+                            "created": 1713667705975,
+                            "text": "implicit rules"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "d0pgia1sbyw0",
+                                    "created": 1713667719055,
+                                    "text": "编译c程序：n.o是从n.c自动制作的。会调2用命令：$(CC) -c $(CPPFLAGS) $(CFLAGS) $^ -o $@"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "d0pgkpsbug00",
+                                    "created": 1713667910040,
+                                    "text": "编译cpp程序：n.o是从n.c自动制作的：命令：$(CC) -c $(CPPFLAGS) (CXXFLAGS) $^ -o $@"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "d0pgn3aszso0",
+                                    "created": 1713668096184,
+                                    "text": "链接单个对象文件：n是从n.o自动制作的：命令：$(CC)  $(LDFLAGS) $^ $(LOADLIBES) $(LELIBS) -o $@",
+                                    "layout_right_offset": {
+                                        "x": 23,
+                                        "y": -1
+                                    }
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "d0pgrfqcku80",
+                                    "created": 1713668436702,
+                                    "text": "这些大写的变量的解释和含义得弄清楚",
+                                    "priority": 1,
+                                    "progress": null
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "d0pv59vcw4g0",
+                                            "created": 1713709016581,
+                                            "text": "CC：指定用哪个编辑器，例如CC := gcc(CC := g++)"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "d0pv5w2veow0",
+                                            "created": 1713709064924,
+                                            "text": "CFLAGS"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "d0pvqxxu9bk0",
+                                                    "created": 1713710714621,
+                                                    "text": "-Wall：启用编译器所有警告信息"
+                                                },
+                                                "children": []
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "d0pvrqn9hnk0",
+                                                    "created": 1713710777108,
+                                                    "text": "-O0到-O3，从不优化到尽可能多的优化"
+                                                },
+                                                "children": []
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "d0pvsbu60bc0",
+                                                    "created": 1713710823239,
+                                                    "text": "-g：生成调试信息"
+                                                },
+                                                "children": []
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "d0pvsoan7so0",
+                                                    "created": 1713710850356,
+                                                    "text": "-DDEBUG：生成宏定义DEBUG，这影响程序中的使用"
+                                                },
+                                                "children": []
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "d0pvu1r15y80",
+                                                    "created": 1713710958009,
+                                                    "text": "-L：指定链接的库"
+                                                },
+                                                "children": []
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "d0pvuavrktc0",
+                                                    "created": 1713710977886,
+                                                    "text": "-I：指定头文件搜索的目录"
+                                                },
+                                                "children": []
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "d0pwbifdcqw0",
+                                            "created": 1713712326500,
+                                            "text": "LDFLAGS"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "d0pwblthslc0",
+                                                    "created": 1713712333884,
+                                                    "text": "-L：链接库的路径"
+                                                },
+                                                "children": []
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "d0pwbyhxs7s0",
+                                                    "created": 1713712361484,
+                                                    "text": "-l：链接库的名称"
+                                                },
+                                                "children": []
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "d0pwd0yzog80",
+                                                    "created": 1713712445233,
+                                                    "text": "-static：静态链接所必须的库，减少依赖"
+                                                },
+                                                "children": []
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "d0pwdt0u7sw0",
+                                                    "created": 1713712506294,
+                                                    "text": "-shared：动态链接必须的库，减少可执行文件的大小"
+                                                },
+                                                "children": []
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "d0pweddp57s0",
+                                                    "created": 1713712550607,
+                                                    "text": "-o ：指定可执行文件或库的名称"
+                                                },
+                                                "children": []
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "d0ph2aj9db40",
+                            "created": 1713669287395,
+                            "text": "static pattern rules"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "d0ph2i1c1800",
+                                    "created": 1713669303725,
+                                    "text": "targets... : target-pattern : prereq-patterns ..."
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "d0ph355nf2g0",
+                                    "created": 1713669354052,
+                                    "text": "本质是给定的目标与目标模式匹配，任何匹配的东西成为stem，然后将stem替换到prereq模式中，以生成目标的prereq"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "d0ph5codabc0",
+                                    "created": 1713669527150,
+                                    "text": "objects : a.o b.o c.o ; $(object) : %.o : %.c"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "d0phoo8wrcg0",
+                            "created": 1713671041256,
+                            "text": "static pattern rules and filter"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "d0phozzslp40",
+                                    "created": 1713671066826,
+                                    "text": "filter函数可用于静态模式规则以匹配正确的文件"
+                                },
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "d0pi1xpt5s80",
+                    "created": 1713672080603,
+                    "text": "command echoing/silencing"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "d0pi2ovzxfc0",
+                            "created": 1713672139750,
+                            "text": "可以在每条命令前加上@，这样不会显示每条命令"
+                        },
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "d0pqy6kcshc0",
+                    "created": 1713697176396,
+                    "text": "-k,-i,"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "d0pr1ms7as00",
+                            "created": 1713697446792,
+                            "text": "-k：将错误视为警告，允许后续目标继续执行。用在尽管存在错误，仍需部分完成构建的情况"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "d0pr2wqgxgg0",
+                            "created": 1713697546819,
+                            "text": "-i：完全忽略错误和警告，用于强制完成整个构建，无论是否存在错误。"
+                        },
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "d0pr3oljgdc0",
+                    "created": 1713697607471,
+                    "text": "递归的使用make",
+                    "priority": 2,
+                    "note": "### 目录结构如下：\nproject/\n    |- Makefile\n    |- subdir1/\n    |    |- Makefile\n    |    |- source1.c\n    |- subdir2/\n    |    |- Makefile\n    |    |- source2.c\n    |- main.c\n---\n\n### makefile的结构ru'xia\n.PHONY: all subdir1 subdir2 clean\n\nall: subdir1 subdir2 main\n\nsubdir1:\n    $(MAKE) -C subdir1\n\nsubdir2:\n    $(MAKE) -C subdir2\n\nmain: main.o\n    $(CC) $^ -o $@\n\nmain.o: main.c\n    $(CC) -c $< -o $@\n\nclean:\n    $(MAKE) -C subdir1 clean\n    $(MAKE) -C subdir2 clean\n    rm -f main main.o\n"
+                },
+                "children": []
+            },
+            {
+                "data": {
+                    "id": "d0pr8ntfwrk0",
+                    "created": 1713697997593,
+                    "text": "=,:=,?=, +=等的使用"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "d0prb08h3h40",
+                            "created": 1713698181351,
+                            "text": "=的用法，定义命令时不查找变量，仅在命令使用时查找变量"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "d0prbqmrgkw0",
+                            "created": 1713698238812,
+                            "text": ":=的用法，只有到目前为止定义的拿些才会被扩展"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "d0prcf5b58o0",
+                            "created": 1713698292176,
+                            "text": "?=的用法：仅设置那些尚未被设置的变量"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "d0prcvcz7lk0",
+                            "created": 1713698327468,
+                            "text": "+=的用法，用在:=后，相当于给一个定义的变量再加上一个变量"
+                        },
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "d0prk73yj0w0",
+                    "created": 1713698901593,
+                    "text": "makefile的条件部分"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "d0prkjyhkew0",
+                            "created": 1713698929561,
+                            "text": "ifeq (a, b) .... else... endif"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "d0prl16y1e00",
+                            "created": 1713698967077,
+                            "text": "ifeq...endif（strip是去掉字符串前面的空格）"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "d0prp2zdgw80",
+                            "created": 1713699284430,
+                            "text": "检查是否定义了变量：ifdef 变量名 endif"
+                        },
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "d0prpnogqe80",
+                    "created": 1713699329483,
+                    "text": "function函数功能"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "d0prptkarko0",
+                            "created": 1713699342291,
+                            "text": "形式：$(func argument,arguments,...)"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "d0prwlsvpjc0",
+                            "created": 1713699873945,
+                            "text": "字符串中的替换：subst:$(subst a,b,$(variable))。将variable中的a替换成b。参数后面有空格的话将会被视为字符串的一部分"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "d0prye9tcm80",
+                            "created": 1713700014283,
+                            "text": "foreach函数：bar:=$(foreach var, list, text)"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "d0ptpb9w3pc0",
+                                    "created": 1713704944700,
+                                    "text": "example: bar := $(foreach var, $(foo), $(var)!)"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "d0puawca5ns0",
+                            "created": 1713706636204,
+                            "text": "函数调用：$(call function_name, $(1), $(2))：函数名字后面跟第一个，第二个参数等等"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "d0pucwijuz40",
+                            "created": 1713706793312,
+                            "text": "shell函数:$(shell shell_cmd)"
+                        },
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "d0pui2he6qo0",
+                    "created": 1713707198123,
+                    "text": "其他指令"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "d0pui6pzvfk0",
+                            "created": 1713707207350,
+                            "text": "vpath指令"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "d0puiktxdag0",
+                                    "created": 1713707238063,
+                                    "text": "vpath指定一组先决条件。啥样的文件去哪里找"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "d0puiz11jd40",
+                                    "created": 1713707268968,
+                                    "text": "格式：%.c src :(或空格) ../src"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "d0pujvgkvjk0",
+                            "created": 1713707339565,
+                            "text": "多行"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "d0pujziesrk0",
+                                    "created": 1713707348383,
+                                    "text": "一行写不下了用\\，然后在下一行再写"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "d0pukn6qcg00",
+                            "created": 1713707399919,
+                            "text": "PHONY"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "d0puks39oco0",
+                                    "created": 1713707410594,
+                                    "text": ".PHONY:clean。防止是文件名，如果存在这个文件名的话，这个指令是不执行的。"
+                                },
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "d0pxj7ib1400",
+                    "created": 1713715750756,
+                    "text": "一个完整的示例"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "d0pxjcpc4n40",
+                            "created": 1713715762065,
+                            "text": "examples",
+                            "note": "#目标程序的名称\nTARGET_EXEC := final_program\n\n#构建目录\nBUILD_DIR := ./build\n\n#源代码目录\nSRC_DIRS := ./src\n\n#使用 find 命令查找所有的 C 和 C++ 源文件\nSRCS := $(shell find $(SRC_DIRS) -name '*.cpp' -or -name '*.c' -or -name '*.s')\n\n#构建目标文件列表，每个源文件的路径前面加上构建目录\nOBJS := $(SRCS:%=$(BUILD_DIR)/%.o)\n\n#定义依赖文件列表，每个目标文件的路径后缀从 .o 替换为 .d\nDEPS := $(OBJS:.o=.d)\n\n#定义头文件搜索路径，使用 find 命令查找源代码目录下的所有子目录，并添加 -I 前缀\nINC_DIRS := $(shell find $(SRC_DIRS) -type d)\n\n#生成 -I 标志，将头文件搜索路径添加到编译器选项中\nINC_FLAGS := $(addprefix -I,$(INC_DIRS))\n\n#设置编译器选项，包括头文件搜索路径和 -MMD -MP 选项，用于生成依赖文件\nCPPFLAGS := $(INC_FLAGS) -MMD -MP\n\n#最终的链接步骤，将所有目标文件链接成可执行文件\n$(BUILD_DIR)/$(TARGET_EXEC): $(OBJS)\n\t$(CXX) $(OBJS) -o $@ $(LDFLAGS)\n\n#C 源文件的编译规则，将源文件编译成目标文件\n$(BUILD_DIR)/%.c.o: %.c\n\tmkdir -p $(dir $@)\n\t$(CC) $(CPPFLAGS) $(CFLAGS) -c $< -o $@\n\n#C++ 源文件的编译规则，将源文件编译成目标文件\n$(BUILD_DIR)/%.cpp.o: %.cpp\n\tmkdir -p $(dir $@)\n\t$(CXX) $(CPPFLAGS) $(CXXFLAGS) -c $< -o $@\n\n#清理目标文件和可执行文件\n.PHONY: clean\nclean:\n\trm -r $(BUILD_DIR)\n\n#包含依赖文件，如果依赖文件不存在则忽略错误\n-include $(DEPS)\n"
+                        },
+                        "children": []
+                    }
+                ]
+            }
+        ]
+    },
+    "template": "right",
+    "theme": "classic",
+    "version": "1.4.43"
+}
